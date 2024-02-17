@@ -1,0 +1,7 @@
+/build/
+/dist/
+/subprojects/*
+!/subprojects/*.wrap
+.DS_Store
+**/__pycache__/
+*.pyc

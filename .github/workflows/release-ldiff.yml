@@ -1,0 +1,50 @@
+name: LoongDiff Release
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    build:
+        uses: ./.github/workflows/build-and-test-ldiff.yml
+    release:
+        runs-on: windows-latest
+        needs: build
+        steps:
+            - name: Download Build Artifact
+              uses: actions/download-artifact@v2
+              with:
+                name: ldiff-build-dist
+                path: dist
+            
+            - name: Create Release
+              id: create_release
+              uses: actions/create-release@v1
+              env:
+                GITHUB_TOKEN: ${{ secrets.LDIFF_ACTION_TOKEN }}
+              with:
+                tag_name: ${{ github.ref }}
+                release_name: ldiff ${{ github.ref }} Release
+                draft: false
+                prerelease: false
+
+            - name: Upload Release Asset (ldiff.exe)
+              uses: actions/upload-release-asset@v1
+              env:
+                GITHUB_TOKEN: ${{ secrets.LDIFF_ACTION_TOKEN }}
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: ./dist/ldiff.exe
+                asset_name: ldiff.exe
+                asset_content_type: application/octet-stream
+
+            - name: Upload Release Asset (ldiff.pdb)
+              uses: actions/upload-release-asset@v1
+              env:
+                  GITHUB_TOKEN: ${{ secrets.LDIFF_ACTION_TOKEN }}
+              with:
+                  upload_url: ${{ steps.create_release.outputs.upload_url }}
+                  asset_path: ./dist/ldiff.pdb
+                  asset_name: ldiff.pdb
+                  asset_content_type: application/octet-stream

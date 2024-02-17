@@ -1,0 +1,10 @@
+#include <winver.h>
+
+//
+// Thirdparty Tool
+//
+
+IDR_EXE_XDELTA3 TOOL "xdelta3-3.0.11-x86_64.exe"
+IDR_EXE_7ZA TOOL "7za.exe"
+IDR_DLL_7ZA TOOL "7za.dll"
+

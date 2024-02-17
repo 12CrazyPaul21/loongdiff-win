@@ -1,0 +1,516 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: powershell.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: G:\usecase
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 90
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 9
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 80
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: loongdiff - patch
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 824
+    content: "\e[2J\e[m\e[HWindows PowerShell\r\n版权所有 (C) Microsoft Corporation。保留所有权利。\r\n\r\n尝试新的跨平台 PowerShell https://aka.ms/pscore6\e]0;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\a\e[?25h"
+  - delay: 11
+    content: "\e[25l\e[6;1H\e[?25h"
+  - delay: 145
+    content: 'PS G:\usecase> '
+  - delay: 518
+    content: "\e[?25l"
+  - delay: 19
+    content: "\e[93mf\e[?25h"
+  - delay: 67
+    content: "\e[m\e[?25l"
+  - delay: 11
+    content: "\e[93m\bfo\e[?25h"
+  - delay: 178
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[6;16Hfol\e[?25h"
+  - delay: 147
+    content: "\e[m\e[?25l"
+  - delay: 23
+    content: "\e[93m\e[6;16Hfold\e[?25h"
+  - delay: 167
+    content: "\e[m\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[6;16Hfolde\e[?25h"
+  - delay: 52
+    content: "\e[m\e[?25l"
+  - delay: 10
+    content: "\e[93m\e[6;16Hfolder\e[?25h"
+  - delay: 251
+    content: "\e[m\e[?25l"
+  - delay: 17
+    content: "\e[93m\e[6;16H.\\folder\\\e[?25h"
+  - delay: 354
+    content: "\e[m\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[?25h"
+  - delay: 647
+    content: "\e[m\e[?25l"
+  - delay: 22
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m \e[?25h"
+  - delay: 556
+    content: "\e[?25l"
+  - delay: 18
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m f\e[?25h"
+  - delay: 66
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m fo\e[?25h"
+  - delay: 156
+    content: "\e[?25l"
+  - delay: 15
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m fol\e[?25h"
+  - delay: 61
+    content: "\e[?25l"
+  - delay: 32
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m .\\folder\\\e[?25h"
+  - delay: 302
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m .\\folder\\s\e[?25h"
+  - delay: 83
+    content: "\e[?25l"
+  - delay: 12
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m .\\folder\\sr\e[?25h"
+  - delay: 42
+    content: "\e[?25l"
+  - delay: 19
+    content: "\e[93m\e[6;16H.\\folder_patch.exe\e[m .\\folder\\src\\\e[?25h"
+  - delay: 459
+    content: "\r\n"
+  - delay: 25
+    content: "please ensure that the specified path is not being used by any other application\r\nsource path : G:\\usecase\\folder\\src\\ \e[32m[folder]\e[m\e[35X\r\ntemp folder : G:\\usecase\\folder\\src\\__ldiff_temp\e[32X\r\n"
+  - delay: 16
+    content: " ✔ Export patch \e[32mdone\e[m\e[K\e[?25l\e[72C"
+  - delay: 18
+    content: "\r\n⠋"
+  - delay: 14
+    content: Extract patch...
+  - delay: 48
+    content: "\r⠙"
+  - delay: 16
+    content: Extract patch...
+  - delay: 32
+    content: "\r\e[K\e[92C"
+  - delay: 16
+    content: "\r ✔ Extract patch \e[32mdone\e[m\e[K\r\n ✔ Loading metadata \e[32mdone\e[m\e[K\e[31m\r\nstrongly recommend that you back up the original files!\e[m\e[K\r\ndo you need back up the original files? (y/n) :\e[K\e[1C\e[?25h"
+  - delay: 602
+    content: 'y'
+  - delay: 235
+    content: "\r\n"
+  - delay: 20
+    content: 'please specify the backup file path : '
+  - delay: 744
+    content: s
+  - delay: 72
+    content: o
+  - delay: 55
+    content: u
+  - delay: 90
+    content: r
+  - delay: 225
+    content: c
+  - delay: 230
+    content: e
+  - delay: 309
+    content: _
+  - delay: 405
+    content: b
+  - delay: 23
+    content: a
+  - delay: 204
+    content: c
+  - delay: 50
+    content: k
+  - delay: 410
+    content: u
+  - delay: 36
+    content: p
+  - delay: 277
+    content: "\r\n"
+  - delay: 19
+    content: "\e[?25l"
+  - delay: 15
+    content: ⠋Backing up...
+  - delay: 49
+    content: "\r⠙"
+  - delay: 17
+    content: Backing up...
+  - delay: 44
+    content: "\r⠹"
+  - delay: 15
+    content: Backing up...
+  - delay: 47
+    content: "\r⠸"
+  - delay: 16
+    content: Backing up...
+  - delay: 47
+    content: "\r⠼"
+  - delay: 15
+    content: Backing up...
+  - delay: 47
+    content: "\r⠴"
+  - delay: 16
+    content: Backing up...
+  - delay: 46
+    content: "\r⠦"
+  - delay: 15
+    content: Backing up...
+  - delay: 47
+    content: "\r⠧"
+  - delay: 16
+    content: Backing up...
+  - delay: 46
+    content: "\r⠇"
+  - delay: 16
+    content: Backing up...
+  - delay: 50
+    content: "\r⠏"
+  - delay: 15
+    content: Backing up...
+  - delay: 46
+    content: "\r⠋"
+  - delay: 14
+    content: Backing up...
+  - delay: 48
+    content: "\r⠙"
+  - delay: 15
+    content: Backing up...
+  - delay: 49
+    content: "\r⠹"
+  - delay: 16
+    content: Backing up...
+  - delay: 47
+    content: "\r⠸"
+  - delay: 16
+    content: Backing up...
+  - delay: 49
+    content: "\r⠼"
+  - delay: 15
+    content: Backing up...
+  - delay: 49
+    content: "\r⠴"
+  - delay: 15
+    content: Backing up...
+  - delay: 49
+    content: "\r⠦"
+  - delay: 15
+    content: Backing up...
+  - delay: 50
+    content: "\r⠧"
+  - delay: 13
+    content: Backing up...
+  - delay: 48
+    content: "\r⠇"
+  - delay: 17
+    content: Backing up...
+  - delay: 65
+    content: "\r⠏"
+  - delay: 10
+    content: Backing up...
+  - delay: 140
+    content: "\r⠋"
+  - delay: 62
+    content: Backing up...
+  - delay: 128
+    content: "\r⠙"
+  - delay: 22
+    content: Backing up...
+  - delay: 104
+    content: "\r⠹"
+  - delay: 11
+    content: Backing up...
+  - delay: 155
+    content: "\r⠸"
+  - delay: 84
+    content: Backing up...
+  - delay: 121
+    content: "\r⠼"
+  - delay: 31
+    content: Backing up...
+  - delay: 59
+    content: "\r⠴"
+  - delay: 26
+    content: Backing up...
+  - delay: 82
+    content: "\r⠦"
+  - delay: 23
+    content: Backing up...
+  - delay: 92
+    content: "\r⠧"
+  - delay: 32
+    content: Backing up...
+  - delay: 107
+    content: "\r⠇"
+  - delay: 28
+    content: Backing up...
+  - delay: 68
+    content: "\r⠏"
+  - delay: 11
+    content: Backing up...
+  - delay: 53
+    content: "\r⠋"
+  - delay: 13
+    content: Backing up...
+  - delay: 47
+    content: "\r⠙"
+  - delay: 14
+    content: Backing up...
+  - delay: 47
+    content: "\r⠹"
+  - delay: 16
+    content: Backing up...
+  - delay: 47
+    content: "\r⠸"
+  - delay: 16
+    content: Backing up...
+  - delay: 47
+    content: "\r⠼"
+  - delay: 14
+    content: Backing up...
+  - delay: 47
+    content: "\r⠴"
+  - delay: 14
+    content: Backing up...
+  - delay: 46
+    content: "\r⠦"
+  - delay: 16
+    content: Backing up...
+  - delay: 50
+    content: "\r⠧"
+  - delay: 15
+    content: Backing up...
+  - delay: 44
+    content: "\r⠇"
+  - delay: 14
+    content: Backing up...
+  - delay: 48
+    content: "\r⠏"
+  - delay: 13
+    content: Backing up...
+  - delay: 51
+    content: "\r⠋"
+  - delay: 14
+    content: Backing up...
+  - delay: 48
+    content: "\r⠙"
+  - delay: 15
+    content: Backing up...
+  - delay: 49
+    content: "\r⠹"
+  - delay: 14
+    content: Backing up...
+  - delay: 49
+    content: "\r⠸"
+  - delay: 15
+    content: Backing up...
+  - delay: 46
+    content: "\r⠼"
+  - delay: 15
+    content: Backing up...
+  - delay: 50
+    content: "\r⠴"
+  - delay: 14
+    content: Backing up...
+  - delay: 32
+    content: "\r\e[K\e[92C"
+  - delay: 14
+    content: "\r ✔ Backing up \e[32mdone\e[m\e[K\r\ngenerate backup -> \e[36mG:\\usecase\\source_backup.ldiffbak.7z\e[m[20.4807MB]\e[K\r\n Begin Patching\e[K\r\n[█████      1/2] \e[32mpatch\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\cspCzOlPek.bin.lpatch\e[m[80\r\n3.42KB] -> \e[36mG:\\usecase\\folder\\src\\cspCzOlPek.bin\e[m[1.9583MB]\e[K\e[?25h"
+  - delay: 82
+    content: "\e[32m success"
+  - delay: 13
+    content: "\e[25l\e[m\r\n[██████████ 2/2] \e[32mpatch\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\字3P24W6rL\r\ng.bin.lpatch\e[m[385.735KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[m[443.189KB]   \e[22;90H\e[?25h"
+  - delay: 66
+    content: "\e[32m\e[36m\rg.bin.lpatch\e[m[385.735KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[m[443.189KB]\e[32m su\r\nccess\e[m\e[K"
+  - delay: 6
+    content: "\e[36m\e[m\r\n ✔ Patching \e[32mdone\e[m\e[K\r\n Begin Applying\e[K\r\n[█████      1/2] \e[32mapply\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\cspCzOlPek.bin\e[m[2.74264MB\r\n] -> \e[36mG:\\usecase\\folder\\src\\cspCzOlPek.bin\e[32m success\e[m\e[K\r\n[██████████ 2/2] \e[32mapply\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\字3P24W6rL\b\e[m\r\n\e[36mg.bin\e[m[828.706KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[32m success\e[36m\e[K\r\e[m\n ✔ Applying \e[32mdone\e[m\e[K\r\n Begin Remove source only\r\n[██▌        1/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\R32M年57w龙ekG\e[m\e[K\r\n[█████      2/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\D7Av吉RbVY4Ma\e[m\e[K\r\n[███████▌   3/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\PS龙DTqO17V.bin\r\e[m\n[██████████ 4/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\中KRq5d4T6m.bin\e[m\e[K\r\n ✔ Remove source only \e[32mdone\e[m\e[K\r\n Begin Copy target only\r\n[██▌        1/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\vp2s94利63G.bin\e[m[52.3398KB\b\r\n] -> \e[36mG:\\usecase\\folder\\src\\vp2s94利63G.bin\e[32m success\e[m\e[K\r\e[36m\n\e[m[█████      2/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\7YB龙dnslo\e[m \r\n\e[36m中.bin\e[m[718.851KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\7YB龙dnslo中.bin\e[32m success\e[36m\e[K\r\n\e[m[███████▌   3/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\m文WTcdEK吉pUr\e[m[4KB] -> \e[36mG:\b\e[m\r\n\e[36m\\usecase\\folder\\src\\m文WTcdEK吉pUr\e[32m success\e[36m\e[K\r\n\e[m[██████████ 4/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\2eW大3汉R利\b"
+  - delay: 5
+    content: "\e[m\r\n\e[36mknlC\e[m[4KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\e[K\e[m\e[32m success\r\e[m\n ✔ Copy target only \e[32mdone\e[m\e[K\r\n\e[32mapply patch completed!\e[m\e[K\r"
+  - delay: 13
+    content: |+
+
+  - delay: 17
+    content: 'PS G:\usecase> '
+  - delay: 830
+    content: "\e[?25l"
+  - delay: 23
+    content: "\e[93mldiff\e[m diff .\\folder\\src\\ .\\folder\\target\\ folder-patch \e[90m-e\e[m \e[90m-f\e[?25h"
+  - delay: 895
+    content: "\e[25l\e[m\e[36m\e[Hg.bin.lpatch\e[m[385.735KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[m[443.189KB]\e[32m su\r\nccess\e[m\e[K\r\n ✔ Patching \e[32mdone\e[m\e[K\r\n Begin Applying\e[K\r\n[█████      1/2] \e[32mapply\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\cspCzOlPek.bin\e[m[2.74264MB\r\n] -> \e[36mG:\\usecase\\folder\\src\\cspCzOlPek.bin\e[32m success\e[m\e[K\r\n[██████████ 2/2] \e[32mapply\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\字3P24W6rL\r\ng.bin\e[m[828.706KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[32m success\e[36m\e[K\e[m\r\n ✔ Applying \e[32mdone\e[m\e[K\r\n Begin Remove source only\e[K\r\n[██▌        1/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\R32M年57w龙ekG\e[m\e[K\r\n[█████      2/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\D7Av吉RbVY4Ma\e[m\e[K\r\n[███████▌   3/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\PS龙DTqO17V.bin\e[m\e[K\r\n[██████████ 4/4] \e[32mremove\e[m \e[31mG:\\usecase\\folder\\src\\中KRq5d4T6m.bin\e[m\e[K\r\n ✔ Remove source only \e[32mdone\e[m\e[K\r\n Begin Copy target only\e[K\r\n[██▌        1/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\vp2s94利63G.bin\e[m[52.3398KB\r\n] -> \e[36mG:\\usecase\\folder\\src\\vp2s94利63G.bin\e[32m success\e[m\e[K\r\n[█████      2/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\7YB龙dnslo\e[m \e[36m\r\n中.bin\e[m[718.851KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\7YB龙dnslo中.bin\e[32m success\e[36m\e[K\e[m\r\n[███████▌   3/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\m文WTcdEK吉pUr\e[m[4KB] -> \e[36mG:\r\n\\usecase\\folder\\src\\m文WTcdEK吉pUr\e[32m success\e[36m\e[K\e[m\r\n[██████████ 4/4] \e[32mcopy\e[m \e[36mG:\\usecase\\folder\\src\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\2eW大3汉R利\r\nknlC\e[m[4KB] -> \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\e[32m success\e[36m\e[K\e[m\r\n ✔ Copy target only \e[32mdone\e[m\e[K\e[32m\r\napply patch completed!\e[m\e[K\r\nPS G:\\usecase> \e[93mldiff\e[m diff .\\folder\\src\\ .\\folder\\target\\ folder-patch \e[90m-e\e[m \e[90m-f\e[m\e[K\r\n\e[K\e[75C\e[?25h"
+  - delay: 22
+    content: "\rplease ensure that the specified path is not being used by any other application\r\nsource path : G:\\usecase\\folder\\src\\ \e[32m[folder]\e[m\e[K\r\ntarget path : G:\\usecase\\folder\\target\\ \e[32m[folder]\e[m\e[K\r\npatch path : G:\\usecase\\folder-patch\r\ntemp folder : G:\\usecase\\__ldiff_temp\r\nwork folder : G:\\usecase\\__ldiff_temp\\work\r"
+  - delay: 10
+    content: "\n ✔ Scanning files \e[32mdone\e[m\e[K\e[?25l\e[70C"
+  - delay: 6
+    content: "\r\n\e[?25h Begin Diff common files\r\e[36m\n\e[m[▋           1/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\cl7zG文8rXw.bin\e[m[1.67978MB] and \e[36mG:\\usecase\\fold\b\e[m\r\n\e[36mer\\target\\cl7zG文8rXw.bin\e[m[1.67978MB] -> G:\\usecase\\__ldiff_temp\\work\\root\\cl7zG文8rXw.bin.lp\b"
+  - delay: 17
+    content: "\r\natch"
+  - delay: 77
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[█▎          2/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\cspCzOlPek.bin\e[m[2.74264MB] and \e[36mG:\\usecase\\folde\b\e[m\r\n\e[36mr\\target\\cspCzOlPek.bin\e[m[2.74264MB] -> G:\\usecase\\__ldiff_temp\\work\\root\\cspCzOlPek.bin.lpatc\b"
+  - delay: 20
+    content: "\r\nh"
+  - delay: 74
+    content: "\e[32m same\e[m\r"
+  - delay: 5
+    content: "\e[36m\n\e[m[██          3/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\vp2s94利63G.bin\e[m[52.3398KB] and \e[36mG:\\usecase\\fold\b\e[m\r\n\e[36mer\\target\\vp2s94利63G.bin\e[m[52.3398KB] -> G:\\usecase\\__ldiff_temp\\work\\root\\vp2s94利63G.bin.lp\b"
+  - delay: 18
+    content: "\r\natch"
+  - delay: 63
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[██▋         4/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\WxXE2kDLCsTc\\OKATiJcDU文.bin\e[m[52.7607KB] and \e[36mG:\b\e[m\r\n\e[36m\\usecase\\folder\\target\\WxXE2kDLCsTc\\OKATiJcDU文.bin\e[m[52.7607KB] -> G:\\usecase\\__ldiff_temp\\wo\b"
+  - delay: 25
+    content: "\r\nrk\\root\\WxXE2kDLCsTc\\OKATiJcDU文.bin.lpatch"
+  - delay: 66
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[███▎        5/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\WxXE2kDLCsTc\\m9ZK中汉字VDe.bin\e[m[846.111KB] and \b\r\n\e[36mG:\\usecase\\folder\\target\\WxXE2kDLCsTc\\m9ZK中汉字VDe.bin\e[m[846.111KB] -> G:\\usecase\\__ldiff_tem\b"
+  - delay: 7
+    content: "\r\np\\work\\root\\WxXE2kDLCsTc\\m9ZK中汉字VDe.bin.lpatch"
+  - delay: 81
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[████        6/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\WxXE2kDLCsTc\\owjfMlB文O0.bin\e[m[1.80849MB] and \e[36mG:\b\e[m\r\n\e[36m\\usecase\\folder\\target\\WxXE2kDLCsTc\\owjfMlB文O0.bin\e[m[1.80849MB] -> G:\\usecase\\__ldiff_temp\\wo\b"
+  - delay: 14
+    content: "\r\nrk\\root\\WxXE2kDLCsTc\\owjfMlB文O0.bin.lpatch"
+  - delay: 82
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[████▋       7/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\7YB龙dnslo中.bin\e[m[718.851KB] and \b\r\n\e[36mG:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\7YB龙dnslo中.bin\e[m[718.851KB] -> G:\\usecase\\__ldiff_tem\b"
+  - delay: 16
+    content: "\r\np\\work\\root\\ivU8Tm年lsRbd\\7YB龙dnslo中.bin.lpatch"
+  - delay: 68
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[█████▎      8/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\kCPo6S汉7qZ.bin\e[m[750.685KB] and \e[36mG\e[m\r\n\e[36m:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\kCPo6S汉7qZ.bin\e[m[750.685KB] -> G:\\usecase\\__ldiff_temp\\\b"
+  - delay: 22
+    content: "\r\nwork\\root\\ivU8Tm年lsRbd\\kCPo6S汉7qZ.bin.lpatch"
+  - delay: 60
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[██████      9/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[m[828.706KB] and \e[36mG\e[m\r\n\e[36m:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\字3P24W6rLg.bin\e[m[828.706KB] -> G:\\usecase\\__ldiff_temp\\\b"
+  - delay: 19
+    content: "\r\nwork\\root\\ivU8Tm年lsRbd\\字3P24W6rLg.bin.lpatch"
+  - delay: 90
+    content: "\e[32m same\e[m\r"
+  - delay: 12
+    content: "\n[██████▋    10/15] \e[32mdiff\e[m\e[K\e[1C\e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\FSPtWcofb0.bin\e[m[1\b\r\n.91916MB] and \e[36mG:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\FSPtWcofb0.bin\e[m[1.91916M\b"
+  - delay: 20
+    content: "\r\nB] -> G:\\usecase\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\FSPtWcofb0.bin.lpatch \b"
+  - delay: 87
+    content: "\e[32m \r\nsame\e[m\r\n[███████▎   11/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\PHze8SE57利.bin\e[m[\r\n901.757KB] and \e[36mG:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\PHze8SE57利.bin\e[m[901.75\b\r\n7KB] -> G:\\usecase\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\PHze8SE57利.bin.lpat\b"
+  - delay: 15
+    content: "\r\nch"
+  - delay: 78
+    content: "\e[32m same\e[m\r\n[████████   12/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\U汉cr5yx3G龙.bin\b\e[m\r\n[282.71KB] and \e[36mG:\\usecase\\folder\\target\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\U汉cr5yx3G龙.bin\e[m[282.7\b\r\n1KB] -> G:\\usecase\\__ldiff_temp\\work\\root\\ivU8Tm年lsRbd\\2eW大3汉R利knlC\\U汉cr5yx3G龙.bin.lpa\b"
+  - delay: 10
+    content: "\r\ntch"
+  - delay: 73
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[████████▋  13/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\m文WTcdEK吉pUr\\1OIzsCYElg.bin\e[m[917.363KB] and \e[36mG\e[m\r\n\e[36m:\\usecase\\folder\\target\\m文WTcdEK吉pUr\\1OIzsCYElg.bin\e[m[917.363KB] -> G:\\usecase\\__ldiff_temp\\\b"
+  - delay: 19
+    content: "\r\nwork\\root\\m文WTcdEK吉pUr\\1OIzsCYElg.bin.lpatch"
+  - delay: 66
+    content: "\e[32m same\e[m\r\e[36m\n\e[m[█████████▎ 14/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\m文WTcdEK吉pUr\\吉v6dGBohDe.bin\e[m[247.956KB] and \b\r\n\e[36mG:\\usecase\\folder\\target\\m文WTcdEK吉pUr\\吉v6dGBohDe.bin\e[m[247.956KB] -> G:\\usecase\\__ldiff_tem\b"
+  - delay: 14
+    content: "\r\np\\work\\root\\m文WTcdEK吉pUr\\吉v6dGBohDe.bin.lpatch"
+  - delay: 62
+    content: "\e[32m same\e[m\r\n[██████████ 15/15] \e[32mdiff\e[m \e[36mG:\\usecase\\folder\\src\\m文WTcdEK吉pUr\\利vntAV龙Zu3.bin\e[m[1.32541MB] and\b\r\n \e[36mG:\\usecase\\folder\\target\\m文WTcdEK吉pUr\\利vntAV龙Zu3.bin\e[m[1.32541MB] -> G:\\usecase\\__ldiff_t\b"
+  - delay: 10
+    content: "\r\nemp\\work\\root\\m文WTcdEK吉pUr\\利vntAV龙Zu3.bin.lpatch"
+  - delay: 71
+    content: "\e[32m same\e[m\r\n ✔ Diff common files \e[32mdone\e[m\e[K\r\n ✔ Delete empty folder records \e[32mdone\e[m\e[K\e[?25l\e[57C\r\n Begin Recording target only files\r\e[?25h\n ✔ Recording target only files \e[32mdone\e[m\e[K\r\n Begin Recording target only folders\r\n ✔ Recording target only folders \e[32mdone\e[m\e[K\r\n Begin Recording source only files\r\n ✔ Recording source only files \e[32mdone\e[m\e[K\r\n Begin Recording source only folder\r\n ✔ Recording source only folder \e[32mdone\e[m\e[K\r\n\e[32mthe source folder and the target folder are the same, so no patching is required!\e[m\e[K\r"
+  - delay: 100
+    content: "\nPS G:\\usecase>\e[1C"

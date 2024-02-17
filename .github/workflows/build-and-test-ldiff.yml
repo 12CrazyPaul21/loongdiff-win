@@ -1,0 +1,54 @@
+name: LoongDiff Build And Test
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+    workflow_call:
+
+jobs:
+    build-and-test:
+        runs-on: windows-latest
+        steps:
+            - name: Git checkout
+              uses: actions/checkout@v2
+
+            - name: Setup MSVC
+              uses: ilammy/msvc-dev-cmd@v1.4.1
+              with:
+                toolset: 14.3
+                arch: x64
+            
+            - name: Setup Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: 3.x
+            
+            - name: Setup Meson
+              run: pip install meson
+            
+            - name: Configure and compile
+              run: |
+                meson setup build/release --buildtype=release --backend=ninja
+                meson compile -C build/release -j1
+                meson install -C build/release
+                copy build/release/ldiff.pdb dist/
+            
+            - name: Run Tests
+              run: |
+                ./build/release/ldiff.exe --version
+                meson test -C build/release --repeat 2
+
+            - name: Upload Build and Test logs
+              if: always()
+              uses: actions/upload-artifact@v2
+              with:
+                name: ldiff-build-and-test-log
+                path: build/release/meson-logs
+
+            - name: Upload Build Artifact
+              uses: actions/upload-artifact@v2
+              with:
+                name: ldiff-build-dist
+                path: dist

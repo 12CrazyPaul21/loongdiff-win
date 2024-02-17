@@ -1,0 +1,6 @@
+#define APP_NAME "LoongDiff"
+#define APP_VERSION "ldiff @version@"
+#define APP_PROGRAM "ldiff"
+#define APP_DESCRIPTION "a diff-patch tool for windows"
+#define APP_PATCHER "(patch is embedded)"
+#define APP_TEMP "__ldiff_temp"
