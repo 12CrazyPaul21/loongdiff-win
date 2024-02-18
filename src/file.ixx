@@ -75,7 +75,7 @@ public:
     static bool           HidePath(const std::string& path);
     static bool           Copy(const std::string& src, const std::string& target);
     static bool           Remove(const std::string& path);
-    static bool           OverWrite(const std::string& src, const std::string& target);
+    static bool           Move(const std::string& src, const std::string& target, bool force = true);
     static bool ListFolder(const std::string& folder, const std::string& subFolder, std::set<std::string>& stFolders,
                            std::set<std::string>& stFiles);
 
@@ -470,13 +470,13 @@ bool File::Remove(const std::string& path)
     return std::filesystem::remove_all(path, code) > 0;
 }
 
-bool File::OverWrite(const std::string& src, const std::string& target)
+bool File::Move(const std::string& src, const std::string& target, bool force)
 {
     if (src.empty() || target.empty()) {
         return false;
     }
 
-    if (IsPathExists(target)) {
+    if (force && IsPathExists(target)) {
         if (!Remove(target)) {
             return false;
         }
