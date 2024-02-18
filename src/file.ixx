@@ -75,6 +75,7 @@ public:
     static bool           HidePath(const std::string& path);
     static bool           Copy(const std::string& src, const std::string& target);
     static bool           Remove(const std::string& path);
+    static bool           OverWrite(const std::string& src, const std::string& target);
     static bool ListFolder(const std::string& folder, const std::string& subFolder, std::set<std::string>& stFolders,
                            std::set<std::string>& stFiles);
 
@@ -442,10 +443,13 @@ bool File::MakeFilesFolder(const std::string& file)
     return Mkdir(std::filesystem::path(file).parent_path().string());
 }
 
-bool File::Remove(const std::string& path)
+bool File::HidePath(const std::string& path)
 {
-    std::error_code code;
-    return std::filesystem::remove_all(path, code) > 0;
+    if (path.empty()) {
+        return false;
+    }
+
+    return SetFileAttributesA(path.c_str(), FILE_ATTRIBUTE_HIDDEN);
 }
 
 bool File::Copy(const std::string& src, const std::string& target)
@@ -460,13 +464,28 @@ bool File::Copy(const std::string& src, const std::string& target)
     return !err.value();
 }
 
-bool File::HidePath(const std::string& path)
+bool File::Remove(const std::string& path)
 {
-    if (path.empty()) {
+    std::error_code code;
+    return std::filesystem::remove_all(path, code) > 0;
+}
+
+bool File::OverWrite(const std::string& src, const std::string& target)
+{
+    if (src.empty() || target.empty()) {
         return false;
     }
 
-    return SetFileAttributesA(path.c_str(), FILE_ATTRIBUTE_HIDDEN);
+    if (IsPathExists(target)) {
+        if (!Remove(target)) {
+            return false;
+        }
+    }
+
+    std::error_code code;
+    std::filesystem::rename(src, target, code);
+
+    return !code;
 }
 
 bool File::ListFolder(const std::string& folder, const std::string& subFolder, std::set<std::string>& stFolders,
