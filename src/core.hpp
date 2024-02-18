@@ -434,7 +434,7 @@ int patch_file(const std::string& rootpath, const PatchProgramArgs& args)
     });
     
     SPINNER_RUN("Applying", [&] {
-        return !File::OverWrite(tarfile, srcfile);
+        return !File::Move(tarfile, srcfile);
     },
     RunMsgMap{
         MAKE_RUNMSG(1, true, fmt::color::red, fmt::gen("overwrite file failed : {} -> {}", tarfile, srcfile)),
@@ -500,7 +500,7 @@ int patch_folder(const std::string& rootpath, const PatchProgramArgs& args)
             );
             // clang-format on
 
-            if (!File::OverWrite(it->first, it->second)) {
+            if (!File::Move(it->first, it->second)) {
                 fmt::perrorln_red(" failed");
                 fmt::perrorln_red("overwrite file failed : {} -> {}", it->first, it->second);
                 return 1;
